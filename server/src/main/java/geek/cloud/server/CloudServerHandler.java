@@ -42,8 +42,6 @@ public class CloudServerHandler extends ChannelInboundHandlerAdapter {
                 Files.write(Paths.get("server_storage/" + fm.getFilename()), fm.getData(), StandardOpenOption.CREATE);
                 System.out.println("Файл сохранен");
 
-
-
             }
 
 

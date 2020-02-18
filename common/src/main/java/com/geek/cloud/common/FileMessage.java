@@ -10,6 +10,7 @@ public class FileMessage extends MyMessage {
     private String filename;
     private byte[] data;
 
+
     public String getFilename() {
         return filename;
     }

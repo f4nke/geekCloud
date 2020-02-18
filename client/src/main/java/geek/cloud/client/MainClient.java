@@ -28,7 +28,6 @@ public class MainClient {
             oeos.writeObject(fmgToServer);
             oeos.flush();
             odis = new ObjectDecoderInputStream(socket.getInputStream(), 100 * 1024 * 1024);
-
             while (true) {
                 MyMessage fromServer =  (MyMessage) odis.readObject();
                     if (fromServer instanceof FileMessage) {

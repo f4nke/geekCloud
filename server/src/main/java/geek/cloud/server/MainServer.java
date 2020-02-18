@@ -50,22 +50,3 @@ public class MainServer {
 }
 
 
-//    serializableServerExample();
-//}
-//
-//
-//
-//private static void serializableServerExample() {
-//        try (ServerSocket serverSocket = new ServerSocket(8189)) {
-//        System.out.println("Сервер запущен. Ожидаем подключение клиента");
-//        try (Socket socket = serverSocket.accept();
-//        ObjectInputStream in = new ObjectInputStream(socket.getInputStream())) {
-//        System.out.println("Клиент подключился");
-//        MyMessage tf = (MyMessage)in.readObject();
-//        System.out.println("Получен пакет от клиента: " + tf);
-//        } catch (ClassNotFoundException e) {
-//        e.printStackTrace();
-//        }
-//        } catch (IOException e) {
-//        e.printStackTrace();
-//        }

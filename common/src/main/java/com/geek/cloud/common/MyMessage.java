@@ -15,7 +15,6 @@ public class MyMessage implements Serializable {
     public String getText() {
         return text;
     }
-
     public MyMessage(String text) {
         this.text = text;
 
