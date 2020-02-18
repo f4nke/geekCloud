@@ -22,5 +22,4 @@ public class FileMessage extends MyMessage {
         filename = path.getFileName().toString();
         data = Files.readAllBytes(path);
     }
-
 }
