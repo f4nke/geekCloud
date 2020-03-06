@@ -88,6 +88,7 @@ public class MainClient {
                 e.printStackTrace();
             }
 
+
 //            while (true) {
 //                MyMessage fromServer =  (MyMessage) odis.readObject();
 //                    if (fromServer instanceof FileMessage) {
