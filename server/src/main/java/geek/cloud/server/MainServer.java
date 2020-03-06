@@ -23,6 +23,7 @@ public class MainServer {
         EventLoopGroup mainGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
+            AuthService.connect();
             ServerBootstrap b = new ServerBootstrap();
             b.group(mainGroup, workerGroup)
                     .channel(NioServerSocketChannel.class)
@@ -46,27 +47,7 @@ public class MainServer {
 
     public static void main(String[] args) throws Exception {
         new MainServer().run();
-
     }
 }
 
 
-//    serializableServerExample();
-//}
-//
-//
-//
-//private static void serializableServerExample() {
-//        try (ServerSocket serverSocket = new ServerSocket(8189)) {
-//        System.out.println("Сервер запущен. Ожидаем подключение клиента");
-//        try (Socket socket = serverSocket.accept();
-//        ObjectInputStream in = new ObjectInputStream(socket.getInputStream())) {
-//        System.out.println("Клиент подключился");
-//        MyMessage tf = (MyMessage)in.readObject();
-//        System.out.println("Получен пакет от клиента: " + tf);
-//        } catch (ClassNotFoundException e) {
-//        e.printStackTrace();
-//        }
-//        } catch (IOException e) {
-//        e.printStackTrace();
-//        }

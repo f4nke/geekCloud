@@ -10,6 +10,7 @@ public class FileMessage extends MyMessage {
     private String filename;
     private byte[] data;
 
+
     public String getFilename() {
         return filename;
     }
@@ -22,5 +23,4 @@ public class FileMessage extends MyMessage {
         filename = path.getFileName().toString();
         data = Files.readAllBytes(path);
     }
-
 }
