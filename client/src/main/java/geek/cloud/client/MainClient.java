@@ -25,8 +25,7 @@ public class MainClient {
     public static void main(String[] args) {
         ObjectEncoderOutputStream oeos = null;
         ObjectDecoderInputStream odis = null;
-        String nick;
-        Path nickPath;
+
 
         try (Socket socket = new Socket("localhost", 8189)) {
             oeos = new ObjectEncoderOutputStream(socket.getOutputStream());
