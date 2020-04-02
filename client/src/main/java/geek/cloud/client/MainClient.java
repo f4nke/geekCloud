@@ -53,7 +53,7 @@ public class MainClient {
 
                     System.out.println("Введите команду:");
                     String str = in.nextLine();
-                    if (str.equals("cкачать")) {
+                    if (str.equals("скачать")) {
                         System.out.println("Введите имя файла:");
                         String fileName = in.nextLine();
                         MyMessage downloadFile = new MyMessage(fileName);
